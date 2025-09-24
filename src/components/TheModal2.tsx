@@ -1,12 +1,14 @@
 import '../style/Modal.scss'
 
-const TheModal = () => {
+interface PropsInterface {jediMessage : string}
+
+const TheModal = ({jediMessage}: PropsInterface) => {
 
   return (
     <div className="modal">
       <div className="modal-content">
         <span className="close">&times;</span>
-        <h3>Ton message</h3>
+        <h3>{jediMessage}</h3>
       </div>
     </div>
   )

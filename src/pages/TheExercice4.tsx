@@ -4,10 +4,10 @@ import { ForceWeilder } from '../types/Character'
 import Rank from '../types/RankEnum'
 import LightSaberColor from '../types/LightSaberColorEnum'
 const Luke: ForceWeilder = {
-  name: 'Luke Skywalker',
-  rank: Rank.GrandMaster,
-  forceLevel: 100,
-  lightsaberColor: LightSaberColor.Blue
+  name: 'Batman',
+  rank: Rank.SithLord,
+  forceLevel: 1000,
+  lightsaberColor: LightSaberColor.Black
 }
 
 function TheExercice4() {
@@ -20,7 +20,7 @@ function TheExercice4() {
       <p>Une fois que c'est fait, change la couleur du sabre laser en fonction de la couleur contenue dans l'objet</p>
       <p>Dernier point, ajoute un deuxième objet dans ta modale, soit un boolean <code>isSith</code> qui affiche si c'est un sith ou pas</p>
       <p>Tu vas donc avoir deux attributs à ton composant TheModal4 soit : <code>character et isSith</code></p>
-      <TheModal4 character={Luke} isSith={false} />
+      <TheModal4 character={Luke} isSith={true} />
     </>
   )
 }

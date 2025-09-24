@@ -7,6 +7,8 @@ const TheExercice2Point5 = () => {
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       const message = (e.target as HTMLInputElement).value;
+      messages.push(message)
+      setMessages([...messages, message]);
       (e.target as HTMLInputElement).value = ''
       // ajouter ton message dans le tableau ici
     }
@@ -23,7 +25,7 @@ const TheExercice2Point5 = () => {
       <label >Message pour la modale
         <input type="text" placeholder='Ton Message' onKeyDown={handleEnter} />
       </label>
-      <TheModal2Point5 />
+      <TheModal2Point5 messageTable={messages} />
     </>
   )
 }
